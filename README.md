@@ -15,8 +15,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Windows Server 2025
+- Windows 11 
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
@@ -32,7 +32,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Setting Up Resources in Azure</h2>
 
 <p>
-<img src="https://i.imgur.com/jUB7t0u.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="755" height="1309" alt="setting up resources" src="https://github.com/user-attachments/assets/9b62b9b8-f03e-4c39-8173-9faf1fb4605e" />
+/>
 </p>
 <p>
 We first have to create a new resource group in Azure.
@@ -42,22 +43,24 @@ Create a new resource group and name it "AD-Lab", then select your region, then 
 <br />
 
 <p>
-<img src="https://i.imgur.com/ybEEAlE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="543" height="1308" alt="creatingDC-1" src="https://github.com/user-attachments/assets/4a3cb315-d7d0-4121-a79c-86241b68c976" />
+/>
 </p>
 <p>
 Now it's time to setup our virtual machines for our domain controller.
 
-Create a new virtual machine and ensure your resource group is "AD-Lab", then name your virtual machine "DC-1", then ensure consistency between regions selected, then select "Windows Server 2022", then select "Standard_E2s_v3" as the size, then enter a username and password (write these down for later), then check the two boxes to continue, then click "Review + create", then once validation is passed, click "Create" at the bottom.
+Create a new virtual machine and ensure your resource group is "AD-Lab", then name your virtual machine "DC-1", then ensure consistency between regions selected, then select "Windows Server 2025", then select "Standard_D2as_v7" as the size, then enter a username and password (write these down for later), then check the two boxes to continue, then click "Review + create", then once validation is passed, click "Create" at the bottom.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/JkxtdPA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="606" height="1311" alt="creatingClient-1" src="https://github.com/user-attachments/assets/23b44c35-8075-4ef8-9d9f-0bbb1805a2f5" />
+/>
 </p>
 <p>
 Now it's time to setup our virtual machine for our client.
 
-Create a new virtual machine and ensure your resource group is "AD-Lab", then name your virtual machine "Client-1", then ensure consistency between regions selected, then select "Windows 10 Pro", then select "Standard_E2s_v3" as the size, then enter a username and password (write these down for later), then check the box to continue, then click "Review + create", then once validation is passed, click "Create" at the bottom.
+Create a new virtual machine and ensure your resource group is "AD-Lab", then name your virtual machine "Client-1", then ensure consistency between regions selected, then select "Windows 11 Pro", then select "Standard_D2as_v7" as the size, then enter a username and password (write these down for later), then check the box to continue, then click "Review + create", then once validation is passed, click "Create" at the bottom.
 </p>
 <br />
 
