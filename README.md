@@ -90,28 +90,35 @@ Then click "Save" and you have successfully set your domain controller's Private
 
 <h2>Ensuring Connectivity Between Client and Domain Controller</h2>
 
+<!--
 <p>
-<img src="https://i.imgur.com/djHK2Yh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1412" height="862" alt="client-1 RDC" src="https://github.com/user-attachments/assets/1e18e6e5-9d2d-415f-8b5d-207b7defd60c" />
 </p>
 <p>
 Now we will login to Remote Desktop using Client-1's Public IP address.
 
+<!--
 Find Client-1 in Azure then click on it, then copy it's Public IP Address, then on your physical machine, launch "Remote Desktop Connection", then paste the public IP into it, then click "Connect", then enter the credentials we wrote down earlier, then click "Yes" to the prompt
 </p>
 <br />
 
+<!--
 <p>
 <img src="https://i.imgur.com/TSAqeaA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Now that you're in Client-1, open "Command Prompt", then ping DC-1's Private IP address (the one we changed from dynamic to static), type "ping 10.0.0.4 -t" in the command prompt, then hit enter.
 
+
 Notice how the pings are being timed out, that is due to the firewall setting for the domain controller. We must now Remote Desktop into our domain controller.
 </p>
+
+-->
 <br />
 
 <p>
-<img src="https://i.imgur.com/oo28oth.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="777" height="690" alt="DC-1 RDC" src="https://github.com/user-attachments/assets/84a2c10a-9ccb-4ca0-88af-bfbf046ee3a5" />
+
 </p>
 <p>
 Find DC-1 in Azure then click it. Then copy the public IP address, then open "Remote Desktop Connection" on your physical machine, then click "Connect", then enter the credentials we wrote down earlier, then click "Yes" to the prompt.
@@ -119,10 +126,18 @@ Find DC-1 in Azure then click it. Then copy the public IP address, then open "Re
 <br />
 
 <p>
-<img src="https://i.imgur.com/tLwr6rq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="930" height="665" alt="DC-1 firewall" src="https://github.com/user-attachments/assets/f1120792-a4a1-4a70-bd25-f0db40972395" />
+
 </p>
 <p>
-Once logged into your domain controller, navigate to the search bar in Windows and type "Windows Defender Firewall with Advanced Security", then click "Inbound Rules", then find "Core Networking Diagnostics", then right click each of the highlighted selections, then click "Enable Rule"
+Once logged into your domain controller, right click the Windows button and click "Run". Open the command "wf.msc" and click "OK".
+
+<p>
+<img width="1022" height="577" alt="dc-1 disablefirewall" src="https://github.com/user-attachments/assets/071e5a52-c2ff-408c-877f-26e65a4efb76" />
+</p>
+<p>
+Once "Windows Defender Firewall with Advanced Security on Local Computer" is open, navigate to "Windows Defender Firewall Properties" and turn the "Firewall State" to off in the tabs for "Domain Profile", "Private Profile", and "Public Profile" then click "OK".
+</p>
 
 Log back into Client-1 and you should see the pings succeeding. Connection has successfully been established so you can close command prompt on Client-1.
 </p>
