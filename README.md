@@ -89,31 +89,8 @@ Then click "Save" and you have successfully set your domain controller's Private
 <br />
 
 <h2>Ensuring Connectivity Between Client and Domain Controller</h2>
-
-<!--
-<p>
-<img width="1412" height="862" alt="client-1 RDC" src="https://github.com/user-attachments/assets/1e18e6e5-9d2d-415f-8b5d-207b7defd60c" />
-</p>
-<p>
-Now we will login to Remote Desktop using Client-1's Public IP address.
-
-<!--
-Find Client-1 in Azure then click on it, then copy it's Public IP Address, then on your physical machine, launch "Remote Desktop Connection", then paste the public IP into it, then click "Connect", then enter the credentials we wrote down earlier, then click "Yes" to the prompt
-</p>
-<br />
-
-<!--
-<p>
-<img src="https://i.imgur.com/TSAqeaA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Now that you're in Client-1, open "Command Prompt", then ping DC-1's Private IP address (the one we changed from dynamic to static), type "ping 10.0.0.4 -t" in the command prompt, then hit enter.
-
-
-Notice how the pings are being timed out, that is due to the firewall setting for the domain controller. We must now Remote Desktop into our domain controller.
 </p>
 
--->
 <br />
 
 <p>
@@ -139,7 +116,22 @@ Once logged into your domain controller, right click the Windows button and clic
 Once "Windows Defender Firewall with Advanced Security on Local Computer" is open, navigate to "Windows Defender Firewall Properties" and turn the "Firewall State" to off in the tabs for "Domain Profile", "Private Profile", and "Public Profile" then click "OK".
 </p>
 
-Log back into Client-1 and you should see the pings succeeding. Connection has successfully been established so you can close command prompt on Client-1.
+
+<p>
+<img width="1412" height="862" alt="client-1 RDC" src="https://github.com/user-attachments/assets/1e18e6e5-9d2d-415f-8b5d-207b7defd60c" />
+</p>
+<p>
+Now we will login to Remote Desktop using Client-1's Public IP address.
+
+Find Client-1 in Azure then click on it, then copy it's Public IP Address, then on your physical machine, launch "Remote Desktop Connection", then paste the public IP into it, then click "Connect", then enter the credentials we wrote down earlier, then click "Yes" to the prompt
+</p>
+<br />
+
+<p>
+<img width="1115" height="623" alt="client-1 ping DC-1" src="https://github.com/user-attachments/assets/048c4123-9258-41d6-b1cc-fcbe06ef809f" />
+</p>
+<p>
+Now that you're in Client-1, open "Command Prompt", then ping DC-1's Private IP address (the one we changed from dynamic to static), type "ping 172.16.0.4" in the command prompt, then hit enter and you should see the pings succeeding. Connection has successfully been established so you can close command prompt on Client-1.
 </p>
 <br />
 
