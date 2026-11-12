@@ -65,28 +65,26 @@ Create a new virtual machine and ensure your resource group is "AD-Lab", then na
 <br />
 
 <p>
-<img src="https://i.imgur.com/K4yFttP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="785" height="847" alt="configureDC-1" src="https://github.com/user-attachments/assets/66d10b82-a915-4bc2-95f4-6ad5cc1bd15d" />
+/>
 </p>
 <p>
 Now we must change our domain controllers Network Interface Card (NIC) Private IP address from dynamic to static.
 
-Find your DC-1 virtual machine in Azure and click on it to open, then select "Networking" from the options available on the left-hand side, then click on "dc-1303_z1"
+Find your DC-1 virtual machine in Azure and click on it to open, then select "Networking" from the options available on the left-hand side, then click on "dc-1232(primary)/ipconfig1(primary)"
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/YDgbbAD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1443" height="763" alt="DC-1 static" src="https://github.com/user-attachments/assets/34f2dc9c-8528-4900-9435-7ec4c34769bf" />
 </p>
 <p>
-From "dc-1303_z1", click "IP configurations" from the options available on the left-hand side, then click on "10.0.0.4 (Dynamic)
+From "dc-1232", click "IP configurations" from the options available on the left-hand side, then click on "172.16.0.4" (Dynamic) and change it to static
 </p>
-<br />
+
 
 <p>
-<img src="https://i.imgur.com/xfAWHEN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Click "Static", then click "Save" and you have successfully set your domain controller's Private IP address to static instead of dynamic.
+Then click "Save" and you have successfully set your domain controller's Private IP address to static instead of dynamic.
 </p>
 <br />
 
