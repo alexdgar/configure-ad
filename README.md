@@ -256,7 +256,7 @@ Right-click the Windows icon on the bottom left of the screen, then click "Syste
 <h2>Creating Additional Users and Logging Into Client-1 with New User</h2>
 
 <p>
-<img src="https://i.imgur.com/nm87W6H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1715" height="902" alt="powershell script" src="https://github.com/user-attachments/assets/c03b2e8d-4eca-4182-82b9-0401a98be8e5" />
 </p>
 <p>
 Remote desktop back into DC-1 as jane_admin, then open "PowerShell_ISE" as an administrator from the Windows search bar, then open this link https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1, then go back to PowerShell, then click "New Script", then paste the contents into the space, then click "Run Script"
@@ -279,7 +279,5 @@ Make sure to delete the resource groups in Azure when you are finished with the 
   
 Congratulations! You have successfully learned to install and use Active Directory using virtual machines in Microsoft Azure.
   
-  
-
 </p>
 <br />
